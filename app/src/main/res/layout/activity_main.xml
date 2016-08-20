@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.max.currencyconverter.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/currency"
+        android:layout_marginBottom="272dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="US Dollars (USD):"
+        android:id="@+id/txtViewUsDollars"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sri Lankan Rupees (LKR):"
+        android:id="@+id/txtViewRupees"
+        android:layout_alignBaseline="@+id/txtLkr"
+        android:layout_alignBottom="@+id/txtLkr"
+        android:layout_toLeftOf="@+id/txtLkr"
+        android:layout_toStartOf="@+id/txtLkr"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUsd"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/txtViewUsDollars"
+        android:layout_toEndOf="@+id/txtViewUsDollars" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLkr"
+        android:layout_below="@+id/txtUsd"
+        android:layout_alignLeft="@+id/txtUsd"
+        android:layout_alignStart="@+id/txtUsd"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/btnConvert"
+        android:layout_below="@+id/txtViewRupees"
+        android:layout_toRightOf="@+id/txtViewRupees"
+        android:layout_toEndOf="@+id/txtViewRupees"
+        android:layout_marginTop="53dp"
+        android:onClick="convert" />
+</RelativeLayout>
