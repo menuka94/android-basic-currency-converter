@@ -41,7 +41,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Unknown input", Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
 }
